@@ -1,23 +1,21 @@
-import java.util.Arrays;
 
 public class Main{
     public static void main(String[] args) {
         String[] parts={"Key","Tires"};
-        Car nissan = new Car("Nissan",5000,2020,"Black",parts);
-        nissan.setColor("red");
-        Car nisssan2 = new Car(nissan);
-        nisssan2.setColor ("yellow");
-      
-     
-        nissan.drive();
+
+        Car[] cars = new Car[]{
+            new Car("Nissan",5000,2020,"Black",parts),
+            new Car("Nissan",5000,2021,"Yellow",parts),
+            new Car("Ford",5000,2020,"Black",parts),
+        };
 
         DealerShip dealerShip = new DealerShip();
+        for (int i = 0; i < cars.length; i++) {
+            dealerShip.setCar(cars[i], i);
+        }
 
-        // dealerShip.setCars(nissan,0)
-        // dealerShip.setCars(nisssan2,1)
-      
+        Car newCar = dealerShip.getCar(0);
+        System.out.println(dealerShip.searchCar("Ford", 5000));
 
-        // System.out.println(nisssan2.getMake());
-        // System.out.println(nisssan2.getColor());
     }
 }
