@@ -10,12 +10,12 @@ public class Main{
       
      
         nissan.drive();
-        nisssan2.setParts(new String[]  {"tires","filter"});
-        System.out.println(Arrays.toString(nissan.getParts()));
-        System.out.println(Arrays.toString(nisssan2.getParts()));
-    
-        System.out.println(nissan);
-        System.out.println(nisssan2);
+
+        DealerShip dealerShip = new DealerShip();
+
+        // dealerShip.setCars(nissan,0)
+        // dealerShip.setCars(nisssan2,1)
+      
 
         // System.out.println(nisssan2.getMake());
         // System.out.println(nisssan2.getColor());
